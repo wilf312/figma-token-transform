@@ -21,8 +21,10 @@ npm run start
 https://github.com/wilf312/figma-token-transform/blob/main/src/tokens.json
 
 4. npm install & npm run start
+‘‘‘
 npm i
 npm run start
+‘‘‘
 
 5. see tokens.ts
 https://github.com/wilf312/figma-token-transform/blob/main/dist/tokens/tokens.ts
