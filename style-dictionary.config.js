@@ -1,11 +1,11 @@
 module.exports = {
+  source: ["dist/output.json"],
+
   format: {
     // Adding a custom format to show how to get an alias's name.
     customFormat: function ({ dictionary, options }) {
-      console.log("test");
-      return dictionary.allTokens
+      const all = dictionary.allTokens
         .map((token) => {
-          console.log("test");
           let value = JSON.stringify(token.value);
           // new option added to decide whether or not to output references
           if (options.outputReferences) {
@@ -23,55 +23,24 @@ module.exports = {
               });
             }
           }
-          console.log(token, value);
 
-          return `export const ${token.name} = ${value};`;
+          return `export const ${token.type}${token.name} = ${value};`;
         })
         .join(`\n`);
+
+      console.log(all);
+      return all;
     },
   },
 
-  source: ["dist/tokens.json"],
   platforms: {
-    json: {
-      buildPath: "build/",
-      files: [
-        {
-          destination: "tokens.json",
-          format: "json/nested",
-        },
-      ],
-    },
-    js: {
-      buildPath: "dist/",
+    ts: {
+      buildPath: "dist/tokens/",
       transformGroup: "js",
       files: [
         {
-          destination: "tokens.ts",
           format: "customFormat",
-          options: {
-            outputReferences: true,
-          },
-        },
-      ],
-    },
-    css: {
-      transformGroup: "css",
-      buildPath: "build/",
-      files: [
-        {
-          destination: "tokens.css",
-          format: "css/variables",
-          options: {
-            outputReferences: true, // new setting, if true will use variable references
-          },
-        },
-        {
-          destination: "tokens.scss",
-          format: "scss/variables",
-          options: {
-            outputReferences: true, // new setting, if true will use variable references
-          },
+          destination: "tokens.ts",
         },
       ],
     },
