@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run transform && npm run styleDist",
+    "start": "npm run transform && npm run styleDict",
     "transform": "token-transformer src/tokens.json dist/output.json",
-    "styleDict": "style-dictionary build --config style-dictionary.config.json5",
-    "styleDict2": "style-dictionary build --config style-dictionary.config.js"
+    "styleDict": "style-dictionary build --config style-dictionary.config.js"
   },
   "repository": {
     "type": "git",
