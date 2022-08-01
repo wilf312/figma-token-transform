@@ -1,0 +1,27 @@
+{
+  "base": {
+    "value": 16,
+    "type": "fontSizes",
+    "description": "全ての文字サイズのベースになるサイズ"
+  },
+  "main": {
+    "primary": {
+      "value": "#f20000",
+      "type": "color"
+    },
+    "secondary": {
+      "value": "#602cfc",
+      "type": "color"
+    }
+  },
+  "semantic": {
+    "red": {
+      "value": "#f20000",
+      "type": "color"
+    },
+    "blue": {
+      "value": "#602cfc",
+      "type": "color"
+    }
+  }
+}
