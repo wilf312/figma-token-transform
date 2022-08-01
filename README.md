@@ -28,6 +28,9 @@ npm run start
 https://github.com/wilf312/figma-token-transform/blob/main/dist/tokens/tokens.ts
 
 
+<img width="570" alt="スクリーンショット 2022-08-01 17 23 45" src="https://user-images.githubusercontent.com/2202197/182106041-968646d2-0855-4a7e-b6e2-f7dff509c0a9.png">
+
+
 
 
 ## ref
