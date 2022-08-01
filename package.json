@@ -1,0 +1,27 @@
+{
+  "name": "figma-token-transform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run transform && npm run styleDist",
+    "transform": "token-transformer src/tokens.json dist/output.json",
+    "styleDict": "style-dictionary build --config style-dictionary.config.json5",
+    "styleDict2": "style-dictionary build --config style-dictionary.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilf312/figma-token-transform.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilf312/figma-token-transform/issues"
+  },
+  "homepage": "https://github.com/wilf312/figma-token-transform#readme",
+  "dependencies": {
+    "style-dictionary": "^3.7.1",
+    "token-transformer": "^0.0.24"
+  }
+}
