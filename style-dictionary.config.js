@@ -42,10 +42,10 @@ module.exports = {
               });
             }
           }
-          const comment = !token.description ? "" : ` // ${token.description}`;
+          const comment = !token.description ? "" : `/** ${token.description} */\n`;
 
           // type + name で名前を構築する
-          return `export const ${token.type}${token.name} = ${value};${comment}`;
+          return `${comment}export const ${token.type}${token.name} = ${value};`;
         })
         .join(`\n`);
 
